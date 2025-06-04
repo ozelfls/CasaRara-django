@@ -1,0 +1,119 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/style.css' %}" rel="stylesheet"/>
+    <link href="{% static 'style/about.css' %}" rel="stylesheet"/>
+    <link rel="icon" href="/static/imagens/icons/LogoSomente.png">
+    <link rel="stylesheet" href="/static/unidade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Sobre nós</title>
+</head>
+<body>
+    <div id="header-top">
+        <img src="/static/imagens/casaRaraBranco_1.png" alt="" id="casaRaraLogo">
+        <a href="/inicio/">Início</a>
+        <a href="/unidade/">Unidade</a>
+        <a href="#">Sobre</a>
+    </div>
+    <div class="first-content">
+        <div class="contentBox">
+            <h1>Quem somos nós?</h1>
+            <p>A Casa Rara é um espaço de acolhimento, informação e tratamento multidisciplinar para pessoas com doenças e síndromes raras e suas famílias. Surgiu como um braço autônomo da Casa Atípica (organização sem fins lucrativos) para preencher uma lacuna essencial: um local físico que abraça todas as condições raras, sem distinção.  </p>
+        </div>
+    </div>
+    <div class="center1">
+    <div class="servicesContent1">
+        <div class="item item-2">
+            <div class="bgIcon">
+                <i class="fa-solid fa-book" id="iconGrid2"></i>
+            </div>
+            <div class="formatacao">
+                <h2>Nossa Historia</h2>
+                <p>A ideia da Casa Rara nasceu quando uma amiga com uma condição rara pediu por um lugar de acolhimento. Percebemos que, embora existissem coletivos para algumas síndromes específicas, faltava um espaço inclusivo que atendesse todas as pessoas raras. Foi então que decidimos: <strong>"Vamos criar esse lugar!"</strong></p>
+            </div>
+        </div>
+        <div class="item item-1">
+            <div class="bgIcon">
+                <i class="fa-solid fa-house" id="iconGrid"></i>
+            </div>
+            <div class="formatacao">
+                <h2>A Conexão com a Casa Atípica</h2>
+                <p>A Casa Atípica começou como a Associação Fluminense de Deficientes Físicos em 1997. Após encerrar as atividades, mas manter o CNPJ ativo, Malu uma das fundadoras reviveu o projeto ao enfrentar os desafios da maternidade atípica com seu filho Antônio. Da sua vivência, nasceu a Feira Atípica, que reuniu 80 famílias no primeiro ano, promovendo renda e apoio comunitário.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Casa Atípica</h1>
+                <p>Transformando diferenças em potência - por uma sociedade mais inclusiva</p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/casa.atipica/" target="blank" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/profile.php?id=100087728827841"target = "blank" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/5521981069961" target = "blank" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Contatos:</h3>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/casa.atipica/" target="_blank" class="footer-link"><strong>Instagram:</strong>@casa.atipica</a>
+                </li>
+                <li>
+                    <a href="mailto:Casa.atipicaa@gmail.com" target="_blank" class="footer-link"><strong>E-mail:</strong> manueglantina@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://web.facebook.com/profile.php?id=100087728827841" target="_blank" class="footer-link"><strong>Facebook:</strong> CASA Atípica </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5521981069961" target="_blank" class="footer-link"><strong>Whatsapp</strong> (21) 98106-9961</a>
+                </li>
+
+            </ul>
+            <div id="footer_subscribe">
+                <h3>AJUDA</h3>
+
+                <p>ENVIE SEU EMAIL PARA RECEBER AJUDA</p>
+
+                <div id="input_group">
+                    <input type="email" id="email" name="email" required>
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+            <ul class="footer-lista">
+                <li>
+                    <a href="#" class="footerlink"><strong>Casa Rara - Inclusão para pessoas com deficiência</strong></a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink"><strong>PIX: Casa.atipicaa@gmail.com</strong></a>
+                </li>
+                <li>
+                    <a href="#" class="footerlink"><strong>CNPJ: 01.606.055/0001-02</strong></a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="footer_copyright">
+            &#169
+            2025 - Todos os direito reservados. Por Casa Rara
+        </div>
+
+      </footer>
+    <script src="{% static 'script/app.js' %}"></script>
+</body>
+</html>

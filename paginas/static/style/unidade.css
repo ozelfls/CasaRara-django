@@ -1,0 +1,159 @@
+.servicesContent{
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 40px;
+    display: grid;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(3,minmax(0px,30rem));
+    margin-bottom: 5%;
+
+}
+.servicesContent p{
+    font-size: 15px;
+    width: 100%;
+}
+.servicesContent1{
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 40px;
+    display: grid;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(2,minmax(0px,30rem));
+    margin-bottom: 5%;
+
+}
+.servicesContent p{
+    font-size: 15px;
+    width: 100%;
+}
+.item{
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.formatacao{
+    margin-top: 5%;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.formatacao h2{
+    color: rgb(59, 22, 94);
+    margin-bottom: 2%;
+
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.center1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#iconGrid{
+    font-size: 50px;
+    color: white;
+}
+
+#iconGrid2{
+    font-size: 50px;
+    color: white;
+}
+
+#iconGrid3{
+    font-size: 50px;
+    color: white;
+}
+
+.bgIcon{
+    background-color: rgb(59, 22, 94);
+    border-radius: 8px 8px 0px 0px;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactDesc h2{
+    color: rgb(59, 22, 94);
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.contactDesc{
+    width: 50%;
+    margin-left: 10%;
+}
+.contactDesc p{
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.contactUs{
+    margin-bottom: 3rem;
+    display: flex;
+}
+.contactUs li{
+    margin-bottom: 3px;
+}
+ul li{
+    list-style-type: none;
+}
+
+.contactGrid{
+    width: auto;
+
+}
+
+.contactContent{
+/* border: 2px solid blue; */
+margin: 8px;
+display: grid;
+gap: 20px;
+grid-template-columns: 16rem 16rem;
+grid-template-rows: 12rem 12rem;
+
+
+}
+
+.box{
+    background-color: rgb(59, 22, 94);
+    border-radius: 7px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxDesc i{
+    font-size: 60px;
+}
+.boxDesc p{
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.boxDesc{
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 720px) {
+    .servicesContent{
+        grid-template-columns: repeat(1,30rem);
+        grid-auto-rows: 20rem;
+    }
+}
+@media screen and (max-width: 520px){
+    .servicesContent{
+        grid-template-columns: repeat(1,30rem);
+        grid-auto-rows: 20rem;
+    }
+}
