@@ -4,7 +4,11 @@
     <title>Cadastro Realizado</title>
 </head>
 <body>
-    <h1>Cadastro realizado com sucesso!</h1>
-    <a href="{% url 'submit' %}">Cadastrar outro paciente</a>
+    <div class="div_connect2">
+        <h1>Cadastro realizado com sucesso!</h1>
+        <a class="btn_connect2" href="{% url 'submit' %}">Cadastrar outro paciente</a>
+        <a class="btn_connect2" href="{% url 'cadastrar_medico' %}">Cadastrar outro medico</a>
+    </div>
+
 </body>
 </html>

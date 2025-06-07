@@ -4,6 +4,7 @@ from paginas import views as paginas_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('paginas.urls')),
     path('', include('pacientes.urls')),
     path('', paginas_views.index_view, name='index'),
     path('about/', paginas_views.about_view, name='about'),

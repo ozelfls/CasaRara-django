@@ -1,19 +1,19 @@
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'style/style.css' %}" rel="stylesheet"/>
-    <link href="{% static 'style/unidade.css' %}" rel="stylesheet"/>
-    <link href="{% static 'style/responsividade_unidade.css' %}"/>
-    <link rel="stylesheet" href="/static/unidade.css">
-    <link rel="icon" href="/static/imagens/icons/LogoSomente.png">
+    <link href="{% static 'style/about.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'style/unidade.css' %}">
+    <link rel="icon" href="{% static 'imagens/icons/LogoSomente.png' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Sobre nós</title>
 </head>
 <body>
     <div id="header-top">
-        <img src="/static/imagens/casaRaraBranco_1.png" alt="" id="casaRaraLogo">
+        <img src="{% static 'imagens/casaRaraBranco_1.png' %}" alt="" id="casaRaraLogo">
         <a href="/inicio/">Início</a>
         <a href="#">Unidade</a>
         <a href="/sobre/">Sobre</a>
@@ -48,7 +48,7 @@
 
         <div class="item item-2">
             <div class="bgIcon">
-            <i class="fa-solid fa-masks-theater" id="iconGrid2"></i>
+            <i class="fa-solid fa-masks-theater" id="iconGrid"></i>
             </div>
             <div class="formatacao">
             <h2>Atividades Culturais e Inclusivas</h2>
@@ -57,7 +57,7 @@
     </div>
         <div class="item item-3">
             <div class="bgIcon">
-            <i class="fa-solid fa-heart" id="iconGrid3"></i>
+            <i class="fa-solid fa-heart" id="iconGrid"></i>
         </div>
             <div class="formatacao">
                 <h2>Apoio Social e Comunitário</h2>

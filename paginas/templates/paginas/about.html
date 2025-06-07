@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'style/style.css' %}" rel="stylesheet"/>
     <link href="{% static 'style/about.css' %}" rel="stylesheet"/>
-    <link rel="icon" href="/static/imagens/icons/LogoSomente.png">
-    <link rel="stylesheet" href="/static/unidade.css">
+    <link rel="icon" href="{% static 'imagens/icons/LogoSomente.png' %}">
+    <link rel="stylesheet" href="{% static 'style/unidade.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Sobre nós</title>
 </head>
 <body>
     <div id="header-top">
-        <img src="/static/imagens/casaRaraBranco_1.png" alt="" id="casaRaraLogo">
+        <img src="{% static 'imagens/casaRaraBranco_1.png' %}" alt="" id="casaRaraLogo">
         <a href="/inicio/">Início</a>
         <a href="/unidade/">Unidade</a>
         <a href="#">Sobre</a>

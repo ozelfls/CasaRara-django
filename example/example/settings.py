@@ -126,6 +126,9 @@ STATICFILES_DIRS = [
 
 APPEND_SLASH = False
 
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/connect/'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
