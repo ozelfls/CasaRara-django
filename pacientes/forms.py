@@ -1,18 +1,34 @@
 from django import forms
+from .models import Beneficiario, Medico
 
-class BeneficiarioForm(forms.Form):
-    Nome = forms.CharField(max_length=255)
-    CPF = forms.CharField(max_length=11, min_length=11)
-    Data_Nascimento = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
-    Endereco = forms.CharField(widget=forms.Textarea)
-    Telefone = forms.CharField(max_length=20)
-    Email = forms.EmailField(required=False)
+class BeneficiarioForm(forms.ModelForm):
+    class Meta:
+        model = Beneficiario
+        fields = [
+            'Nome',
+            'CPF',
+            'Data_Nascimento',
+            'Endereco',
+            'Telefone',
+            'Email'
+        ]
+        widgets = {
+            'Data_Nascimento': forms.DateInput(attrs={'type': 'date'}),
+            'Endereco': forms.Textarea(attrs={'rows': 3}),
+        }
 
-
-class MedicoForm(forms.Form):
-    nome = forms.CharField(max_length=100)
-    crm = forms.CharField(max_length=20)
-    especialidade = forms.CharField(max_length=50)
-    cpf = forms.CharField(max_length=14)
-    email = forms.EmailField()
-    telefone = forms.CharField(max_length=15)
+class MedicoForm(forms.ModelForm):
+    class Meta:
+        model = Medico
+        fields = [
+            'nome',
+            'crm',
+            'especialidade',
+            'cpf',
+            'email',
+            'telefone'
+        ]
+        widgets = {
+            'crm': forms.TextInput(attrs={'placeholder': 'Digite o CRM'}),
+            'especialidade': forms.TextInput(attrs={'placeholder': 'Ex: Pediatria'}),
+        }

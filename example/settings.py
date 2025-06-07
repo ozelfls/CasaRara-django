@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-import django_mongodb_backend
+from django.db import models
 
 from pathlib import Path
 
@@ -33,9 +33,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'example.apps.MongoAdminConfig',
-    'example.apps.MongoAuthConfig',
-    'example.apps.MongoContentTypesConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -77,18 +77,15 @@ WSGI_APPLICATION = 'example.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'casaRara',
-        'CLIENT': {
-            'host': 'mongodb://localhost:27017/casaRara',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
-}
 
 # Database routers
 # https://docs.djangoproject.com/en/dev/ref/settings/#database-routers
-DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
+# DATABASE_ROUTERS = ["django_mongodb_backend.routers.MongoRouter"]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -120,8 +117,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.2/howto/static-files/
+
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfile"
+
 STATICFILES_DIRS = [
-    BASE_DIR / "paginas/static",
+    BASE_DIR / "static",
 ]
 
 APPEND_SLASH = False
@@ -130,18 +133,15 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/connect/'
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django_mongodb_backend.fields.ObjectIdAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MIGRATION_MODULES = {
-    'admin': 'mongo_migrations.admin',
-    'auth': 'mongo_migrations.auth',
-    'contenttypes': 'mongo_migrations.contenttypes',
-}
+# MIGRATION_MODULES = {
+#     'admin': 'mongo_migrations.admin',
+#     'auth': 'mongo_migrations.auth',
+#     'contenttypes': 'mongo_migrations.contenttypes',
+# }

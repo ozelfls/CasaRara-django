@@ -1,4 +1,4 @@
-from djongo import models
+from django.db import models
 from django.utils import timezone
 from django.core.validators import MinLengthValidator, RegexValidator
 import random
@@ -46,19 +46,26 @@ class Beneficiario(models.Model):
         editable=False,
     )
 
-class Medico:
-    def __init__(self, nome, crm, especialidade, cpf, email, telefone):
-        self.nome = nome
-        self.crm = crm
-        self.especialidade = especialidade
-        self.cpf = cpf
-        self.email = email
-        self.telefone = telefone
+class Medico(models.Model):
+    nome = models.CharField(max_length=255)
+    crm = models.CharField(max_length=20, unique=True)
+    especialidade = models.CharField(max_length=100)
+    cpf = models.CharField(
+        max_length=11,
+        unique=True,
+        validators=[
+            MinLengthValidator(11),
+            RegexValidator(r'^\d{11}$', 'CPF deve conter apenas números')
+        ]
+    )
+    email = models.EmailField()
+    telefone = models.CharField(max_length=20)
+    data_cadastro = models.DateTimeField(default=timezone.now)
 
     class Meta:
-        verbose_name = 'Paciente'
-        verbose_name_plural = 'Pacientes'
-        ordering = ['-Data_Cadastro']
+        verbose_name = 'Médico'
+        verbose_name_plural = 'Médicos'
+        ordering = ['-data_cadastro']
 
     def __str__(self):
-        return f"{self.Nome} (CPF: {self.CPF})"
+        return f"{self.nome} (CRM: {self.crm})"
